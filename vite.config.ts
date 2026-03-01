@@ -4,6 +4,9 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   base: '/BJJ-PWA/', // GitHub Pages 子路径，必须与仓库名一致
+  build: {
+    target: 'es2015', // 兼容 iOS Safari
+  },
   plugins: [
     react(),
     VitePWA({
